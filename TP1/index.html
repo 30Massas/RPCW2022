@@ -3,9 +3,30 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>RPCW22 TP1</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="info.css">
+        <title>RPCW22 TP1 - Japão</title>
     </head>
-    <body>
-        
+    <body bgcolor="#FAFAFA">
+        <div id='topnav'>
+            <a class="active" href="index.html">Home</a>
+            <a href="japao_info.html">Informação</a>
+        </div>
+        <div class="content">
+            <audio id="audio_play">
+                <source src="hino-do-japao.mp3" type="audio/mp3" />
+            </audio>
+            <div>
+                <h1 style="text-align:center">Japão</h1>
+                <img src="https://www.flagsonline.it/uploads/2016-6-6/1200-0/japan.jpg" alt="Japan Flag" class="center" onclick="document.getElementById('audio_play').play(); return false;">
+            </div>
+            <div>
+                <h3 style="text-align:center;" onclick=" document.getElementById('audio_play').pause(); return false;">Isto é uma página sobre o Japão.</h3>
+            </div>
+        </div>
+        <div class="footer">
+            RPCW22 TP1 - Japão
+        </div>
+        <script type="text/javascript" src="jsfunctions.js"></script>
     </body>
 </html>
