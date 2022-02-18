@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifesto>
+    <metadata>
+        <titulo>TPC1 - Japão</titulo>
+        <data>21 de fevereiro de 2022</data>
+        <autor>Luís Pedro Oliveira de Castro Vieira</autor>
+        <uc>Representação e Processamento de Conhecimento na Web</uc>
+    </metadata>
+    <resumo>
+        Este trabalho consistia em desenvolver uma página web simples sobre um dos seguintes temas:
+            -> Jacaré
+            -> Japão
+            -> Jarro
+            -> José
+            -> Janela
+        O intuito deste primeiro trabalho é começar a desenvolver as nossas capacidades de desenvolvimento Web,
+        bem como explorar ferramentas como o HTML, CSS, JavaScript.
+    </resumo>
+    <resultados>
+        <html>
+            <nome>index.html</home>
+            <nome>japao_info.html</home>
+            <nome>turismo.html</home>
+        </html>
+        <css>
+            <nome>info.css</home>
+            <nome>style.css</home>
+            <nome>gallery.css</home>
+        </css>
+        <javascript>
+            <nome>jsfunctions.js</home>
+        </javascript>
+        <imagem>
+            <nome>japan_flag.jpg</home>
+        </imagem>
+        <video>
+            <nome>hino-do-japao.mp3</home>
+        </video>
+    </resultados>
+</manifesto>

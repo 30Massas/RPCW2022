@@ -50,8 +50,19 @@ h1 {
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 1;
 }
 
 .sticky + .content {
     padding-top: 60px;
 }
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: lightgrey;
+    color: black;
+    text-align: center;
+  }
