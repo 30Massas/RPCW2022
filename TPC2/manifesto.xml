@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <doc>
     <meta>
-        <titulo>TPC2: </titulo>
+        <titulo>TPC2: Actors&Movies</titulo>
         <data>22/02/2022</data>
         <autor>
             <id>PG47430</id>
@@ -14,12 +14,11 @@
     </meta>
     <resumo>
         <p>Este trabalho consistia na implementação de um servidor NodeJS.</p>
-        <p>O objetivo seria criar páginas HTML onde apresentássemos a informação presente no</p>
+        <p>O objetivo seria criar páginas HTML onde apresentássemos a informação presente no
             <xref>
                 <url>https://epl.di.uminho.pt/~jcr/AULAS/ATP2021/datasets/cinemaATP.json</url>
                 <texto> dataset</texto>
-            </xref> disponibilizado pelo docente.
-        </p>
+            </xref> disponibilizado pelo docente.</p>
         <p>Foi utilizado um script em Python para gerar as diversas páginas de forma automática</p>
         <p>A página de filmes permite visualizar todos os filmes existentes no dataset, e a página de atores todos os atores.</p>
         <p>Cada registo de filme mostra o ano em que foi realizado, o genre do filme e os atores que nele participaram.</p>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<doc>
+    <meta>
+        <titulo>TPC3: MusicAcademy</titulo>
+        <data>15/03/2022</data>
+        <autor>
+            <id>PG47430</id>
+            <nome>Luís Pedro Oliveira de Castro Vieira</nome>
+        </autor>
+        <uc>
+            <sigla>RPCW</sigla>
+            <nome>Representação e Processamento de Conhecimento na Web</nome>
+        </uc>
+    </meta>
+    <resumo>
+        <p>Este trabalho consistia na implementação de um servidor NodeJS com a utilização de uma API, neste caso o
+            <xref>
+                <url>https://www.npmjs.com/package/json-server</url>
+                <texto>json-server</texto>
+            </xref>
+        </p>
+        <p>O objetivo seria criar uma página HTML onde apresentássemos 3 opções: Lista de Alunos, Lista de Cursos e Lista de Instrumentos.</p>
+        <p>A partir destas três opções, ao tentarmos aceder a uma elas, devemos ser capazes de visualizar a informação presente no dataset
+            <xref>
+                <texto>db.json</texto>
+            </xref>
+        </p>
+        <p>A partir daqui, a informação é apresentada em tabelas de acordo com o que estiver no dataset.</p>
+        <p>A informação é recolhida por pedidos à API utilizada</p>
+        <p>Como um desafio extra, poderíamos tornar cada um dos cursos/alunos/instrumentos em ligações para apresentar informação individual sobre o mesmo.</p>
+    </resumo>
+    <resultados>
+        <resultado>
+            <url>requests.js</url>
+            <texto>Serviço que responde aos pedidos do cliente e comunica com a API do json-server.</texto>
+        </resultado>
+        <resultado>
+            <url>db.json</url>
+            <texto>Dataset.</texto>
+        </resultado>
+        <resultado>
+            <url>https://www.npmjs.com/package/axios</url>
+            <texto>Utilizado para efetuar os pedidos à API. Para instalar correr "npm install axios".</texto>
+        </resultado>
+    </resultados>
+</doc>
