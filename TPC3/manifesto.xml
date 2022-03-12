@@ -13,7 +13,7 @@
         </uc>
     </meta>
     <resumo>
-        <p>Este trabalho consistia na implementação de um servidor NodeJS com a utilização de uma API, neste caso o
+        <p>Este trabalho consistia na implementação de um servidor NodeJS com a utilização de uma REST API, neste caso o
             <xref>
                 <url>https://www.npmjs.com/package/json-server</url>
                 <texto>json-server</texto>
@@ -26,7 +26,7 @@
             </xref>
         </p>
         <p>A partir daqui, a informação é apresentada em tabelas de acordo com o que estiver no dataset.</p>
-        <p>A informação é recolhida por pedidos à API utilizada</p>
+        <p>A informação é recolhida por pedidos à API utilizada.</p>
         <p>Como um desafio extra, poderíamos tornar cada um dos cursos/alunos/instrumentos em ligações para apresentar informação individual sobre o mesmo.</p>
     </resumo>
     <resultados>
