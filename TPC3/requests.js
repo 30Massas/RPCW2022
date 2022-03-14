@@ -35,6 +35,7 @@ function generateMainPage(){
 
 async function getAlunosPage(res){
     var content = header 
+    content += `<p><a href="http://localhost:4000/"><b>Voltar</b></a></p>`
     let result = await axios.get("http://localhost:3000/alunos")
     let data = result.data
     var keys = ['Id','Nome','Curso','Instrumento']
@@ -67,6 +68,7 @@ async function getAlunosPage(res){
 
 async function getSpecificStudentPage(res,aluno){
     var content = header 
+    content += `<p><a href="http://localhost:4000/alunos"><b>Voltar</b></a></p>`
     let result = await axios.get(`http://localhost:3000/alunos?id=${aluno}`)
     let data = result.data
     data.forEach(
@@ -88,6 +90,7 @@ async function getSpecificStudentPage(res,aluno){
 async function getCursosPage(res){
     var keys = ['Id','Designação','Duração','Instrumento']
     var content = header 
+    content += `<p><a href="http://localhost:4000/"><b>Voltar</b></a></p>`
     let result = await axios.get("http://localhost:3000/cursos")
     let data = result.data
     content += `
@@ -119,6 +122,7 @@ async function getCursosPage(res){
 
 async function getSpecificCursoPage(res,curso){
     var content = header 
+    content += `<p><a href="http://localhost:4000/cursos"><b>Voltar</b></a></p>`
     let result = await axios.get(`http://localhost:3000/cursos?id=${curso}`)
     let data = result.data
     data.forEach(
@@ -158,7 +162,8 @@ async function getSpecificCursoPage(res,curso){
 
 async function getInstrumentosPage(res){
     var keys = ['Id','Instrumento']
-    var content = header 
+    var content = header
+    content += `<p><a href="http://localhost:4000/"><b>Voltar</b></a></p>`
     let result = await axios.get("http://localhost:3000/instrumentos")
     let data = result.data
     content += `
@@ -188,6 +193,7 @@ async function getInstrumentosPage(res){
 
 async function getSpecificInstrumentoPage(res,instrumento){
     var content = header 
+    content += `<p><a href="http://localhost:4000/instrumentos"><b>Voltar</b></a></p>`
     let result = await axios.get(`http://localhost:3000/instrumentos?id=${instrumento}`)
     let data = result.data
     data.forEach(
@@ -206,51 +212,53 @@ myserver = http.createServer( function(req,res){
     console.log(req.method + " " + req.url);
     var myurl = url.parse(req.url,true).pathname
     var parts = myurl.split("/")
-    if(parts[1] == ''){
-        res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
-        console.log("Main Page Requested")
-        res.write(generateMainPage());
-        res.end();    
-    }
-    else if(parts[1] == 'alunos'){
-        if(parts[2]){
+    switch(parts[1]){
+        case '':
             res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
-            console.log("Specific Student requested")
-            getSpecificStudentPage(res,parts[2])
-        }
-        else{
+            console.log("Main Page Requested")
+            res.write(generateMainPage());
+            res.end();
+            break
+        case 'alunos':
+            if(parts[2]){
+                res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
+                console.log("Specific Student requested")
+                getSpecificStudentPage(res,parts[2])
+            }
+            else{
+                res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
+                console.log("Student chart requested")
+                getAlunosPage(res)
+            }
+            break
+        case 'cursos':
+            if(parts[2]){
+                res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
+                console.log("Specific Course requested")
+                getSpecificCursoPage(res,parts[2])
+            }
+            else{
+                res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
+                console.log("Course chart requested")
+                getCursosPage(res)
+            }
+            break
+        case 'instrumentos':
+            if(parts[2]){
+                res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
+                console.log("Specific Instrument requested")
+                getSpecificInstrumentoPage(res,parts[2])
+            }
+            else{
+                res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
+                console.log("Instrument chart requested")
+                getInstrumentosPage(res)
+            }
+            break
+        default:
             res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
-            console.log("Student chart requested")
-            getAlunosPage(res)
-        }
-    }
-    else if(parts[1] == 'cursos'){
-        if(parts[2]){
-            res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
-            console.log("Specific Course requested")
-            getSpecificCursoPage(res,parts[2])
-        }
-        else{
-            res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
-            console.log("Course chart requested")
-            getCursosPage(res)
-        }
-    }
-    else if(parts[1] == 'instrumentos'){
-        if(parts[2]){
-            res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
-            console.log("Specific Instrument requested")
-            getSpecificInstrumentoPage(res,parts[2])
-        }
-        else{
-            res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
-            console.log("Instrument chart requested")
-            getInstrumentosPage(res)
-        }
-    }
-    else{
-        res.writeHead(200, {"Content-Type" : "text/html; charset=utf-8"});
-        res.end("<p> Rota não suportada: " + req.url + "</p>");        
+            res.end("<p> Rota não suportada: " + req.url + "</p>");        
+            break
     }
 })
 
