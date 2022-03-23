@@ -1,6 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var axios = require('axios')
+var bodyParser = require('body-parser')
 
 function recuperaInfo(request, callback){
     if(request.headers['content-type'] == 'application/x-www-form-urlencoded'){
@@ -33,21 +34,17 @@ router.get('/insert',function(req,res,next){
 });
 
 router.post('/',function(req,res,next){
-    recuperaInfo(req, resultado => {
-        console.log("POST de musica " + JSON.stringify(resultado))
-        axios.post("http://localhost:3000/musicas", resultado)
-        axios.get("http://localhost:3000/musicas")
-            .then(response => {
-                let a = response.data
-                res.render('musicas',{musicas:a})
-            })
-            .catch(function(erro){
-                res.render('error' , {error : erro})
-                })
+    console.log("POST de musica " + JSON.stringify(req.body))
+    axios.post("http://localhost:3000/musicas", req.body)
+    axios.get("http://localhost:3000/musicas")
+        .then(response => {
+            let a = response.data
+            res.render('musicas',{musicas:a})
         })
+        .catch(function(erro){
+            res.render('error' , {error : erro})
+            })
 });
-
-
 
 router.get('/:id',function(req,res,next){
   var idMusica = req.params.id

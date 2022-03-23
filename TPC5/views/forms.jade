@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1.w3-center Adiciona Uma Nova Música
-  form.w3-container(action='/musicas/insert', method='POST')
+  form.w3-container(action='/musicas', method='POST')
       label.w3-text-teal
         b Título
       input.w3-input.w3-border.w3-light-grey(type='text', name='tit')
