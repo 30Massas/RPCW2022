@@ -1,0 +1,19 @@
+extends layout 
+
+block content
+  h1.w3-center 
+    b Título : #{musica.tit}
+  p.w3-light-green 
+    b Província : 
+        p= musica.prov
+  p.w3-light-green 
+    b Local : 
+        p= musica.local
+  p.w3-light-green 
+    b Músico : 
+        p= musica.musico
+  p.w3-light-green 
+    b Duração : 
+        p= musica.duracao
+  p.w3-center 
+    a(href="/") Voltar
