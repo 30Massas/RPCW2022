@@ -54,5 +54,9 @@
             <url>https://expressjs.com/</url>
             <texto>Framework utilziada para auxiliar no desenvolvimento da aplicação</texto>
         </resultado>
+        <resultado>
+            <url>script.py</url>
+            <texto>Script utilizado para adicionar identificadores a cada música.</texto>
+        </resultado>
     </resultados>
 </doc>
