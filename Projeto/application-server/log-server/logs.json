@@ -1,0 +1,106 @@
+{
+  "logs": [
+    {
+      "user": "teste_apresentacao",
+      "data": "2022-06-28 09:49",
+      "movimento": "registou-se",
+      "id": 1
+    },
+    {
+      "user": "teste_apresentacao",
+      "data": "2022-06-28 09:50",
+      "movimento": "efetuou login",
+      "id": 2
+    },
+    {
+      "user": "teste_apresentacao",
+      "data": "2022-06-28 09:50",
+      "movimento": "pesquisou pelo tipo enunciado",
+      "id": 3
+    },
+    {
+      "user": "teste_apresentacao",
+      "data": "2022-06-28 09:51",
+      "movimento": "alterou o seu perfil",
+      "id": 4
+    },
+    {
+      "user": "teste_apresentacao2",
+      "data": "2022-06-28 09:51",
+      "movimento": "efetuou logout",
+      "id": 5
+    },
+    {
+      "user": "massas",
+      "data": "2022-06-28 09:51",
+      "movimento": "efetuou login",
+      "id": 6
+    },
+    {
+      "user": "massas",
+      "data": "2022-06-28 09:54",
+      "movimento": "efetuou o upload de Enunciado EG",
+      "id": 7
+    },
+    {
+      "user": "madeira",
+      "data": "2022-06-28 09:54",
+      "movimento": "efetuou login",
+      "id": 8
+    },
+    {
+      "user": "massas",
+      "data": "2022-06-28 09:54",
+      "movimento": "editou a noticia 62bacfbb5b8bd7d48ec4d9c4",
+      "id": 9
+    },
+    {
+      "user": "massas",
+      "data": "2022-06-28 09:54",
+      "movimento": "editou a noticia 62bacfbb5b8bd7d48ec4d9c4",
+      "id": 10
+    },
+    {
+      "user": "massas",
+      "data": "2022-06-28 09:55",
+      "movimento": "editou o recurso Enunciado EG",
+      "id": 11
+    },
+    {
+      "user": "massas",
+      "data": "2022-06-28 09:55",
+      "movimento": "pesquisou por 't'",
+      "id": 12
+    },
+    {
+      "user": "massas",
+      "data": "2022-06-28 09:55",
+      "movimento": "pesquisou por 'e'",
+      "id": 13
+    },
+    {
+      "user": "massas",
+      "data": "2022-06-28 09:55",
+      "movimento": "acedeu a página do recurso Enunciado EG",
+      "id": 14
+    },
+    {
+      "user": "massas",
+      "data": "2022-06-28 09:56",
+      "movimento": "descarregou o recurso eg21tp3.pdf",
+      "id": 15
+    },
+    {
+      "user": "massas",
+      "data": "2022-06-28 09:56",
+      "movimento": "deu like no recurso Enunciado EG",
+      "id": 16
+    },
+    {
+      "user": "massas",
+      "data": "2022-06-28 09:56",
+      "movimento": "acedeu a página do recurso Enunciado EG",
+      "id": 17
+    }
+  ]
+}
